@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Document</title>
+</head>
+<body onload="draw()">
+	<canvas id="canvas1" width="300" height="300"></canvas>
+
+
+<!--SCRIPT-->
+<script>
+
+	function draw(){
+		//SQUARE
+		var canvas1 = document.getElementById ('canvas1');
+		var context = canvas1.getContext("2d");
+		context.fillStyle = "#7a89ff";
+		context.fillRect (30,50,100,100);
+
+		//CIRCLE
+		context.fillStyle = "#dab240"
+		context.beginPath();
+		context.arc(210, 100, 50, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+	}
+	
+
+
+
+</script>
+
+
+</body>
+</html>
