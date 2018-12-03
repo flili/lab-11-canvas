@@ -12,18 +12,36 @@
 <script>
 
 	function draw(){
-		//SQUARE
-		var canvas1 = document.getElementById ('canvas1');
-		var context = canvas1.getContext("2d");
-		context.fillStyle = "#7a89ff";
-		context.fillRect (30,50,100,100);
+		//QUESTIONS	
+		var whatRadius = prompt ("Please enter a number for Radius");
+		var whatColor = prompt ("Please enter a color");
 
-		//CIRCLE
-		context.fillStyle = "#dab240"
+		if (whatColor == "red"){
+			context.fillColor = "#FF0000";
+		}
+
+		else if (whatColor == "blue"){
+			context.fillColor = "#0000FF";
+		}
+
+		else if (whatColor == "green"){
+			context.fillColor = "00FF00";
+		}
+		else {
+			console.log("nothing")
+		}
+
+
+		context.fillStyle = whatColor;
 		context.beginPath();
-		context.arc(210, 100, 50, 0, 2 * Math.PI, true);
+		context.arc (150, 150, whatRadius, 0, 2 * Math.PI, true);
 		context.closePath();
 		context.fill();
+
+
+		//CIRCLE RADIUS
+
+		//CIRCLE COLOR
 	}
 	
 
